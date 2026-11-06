@@ -199,15 +199,30 @@ h2 {
     font-size: 18px; 
     text-align: right; }
 .franchise-cta {
-    padding: 2.5rem 0;
-    background: #fff;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line); }
-.franchise-cta h2 {
-    font-size: 26px; }
-.franchise-cta p {
-    margin: .9rem 0 0;
-    max-width: 35rem; }
+    padding: 1.5rem 0 .5rem; }
+.franchise-cta-inner {
+    display: flex;
+    justify-content: center; }
+.franchise-cta-card {
+    max-width: 26rem;
+    text-align: center; }
+.franchise-cta-card h2 {
+    margin: 0 0 .5rem;
+    color: var(--green);
+    font-family: "Any Body", Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3; }
+.franchise-cta-card p {
+    margin: 0 0 1rem;
+    font-size: 15px; }
+.franchise-cta-card .whatsapp-button {
+    display: inline-flex; }
+@media (min-width: 768px) {
+    .franchise-cta-inner {
+        justify-content: flex-end; }
+    .franchise-cta-card {
+        text-align: right; } }
 .whatsapp-section {
     padding: 2rem 0;
     background: var(--mist); }
