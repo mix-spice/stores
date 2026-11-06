@@ -1,0 +1,370 @@
+@font-face { font-family: "Any Body"; src: url("fonts/BodyText-LargeRegular.ttf") format("truetype"); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Any Body"; src: url("fonts/BodyText-LargeBold.ttf") format("truetype"); font-style: normal; font-weight: 700; font-display: swap; }
+
+:root { 
+    --green: #395020; 
+    --cream: #fffbf3; 
+    --ink: #14200c; 
+    --mist: #eef0e8; 
+    --line: #cbd3bf; 
+    --radius: 1rem; 
+    --shadow: 0 1rem 2.5rem rgba(20, 32, 12, .12); 
+    --content: 1200px; }
+* { 
+    box-sizing: border-box; }
+html { 
+    scroll-behavior: smooth; }
+body {
+    margin: 0;
+    padding-top: 70px;
+    background: var(--cream);
+    color: var(--ink); font-family: "Any Body", Arial, sans-serif; font-size: 17px; line-height: 1.5; }
+#main-content {
+    /* Fallback backdrop for the space the floating WhatsApp button rests
+       in on mobile, so it matches the questions section instead of the
+       page background. Hero and stores sections paint their own bg over this. */
+    background: var(--mist); }
+a { 
+    color: inherit; }
+button, a { 
+    -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible { 
+    outline: 3px solid var(--green); 
+    outline-offset: 3px; }
+.container { 
+    width: min(100% - 2rem, var(--content)); 
+    margin: 0 auto; }
+.skip-link { 
+    position: fixed; 
+    z-index: 20; 
+    top: .5rem; 
+    left: .5rem; 
+    padding: .75rem 1rem; 
+    background: var(--cream); 
+    transform: translateY(-200%); }
+.skip-link:focus { transform: translateY(0); }
+.site-header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 251, 243, .94);
+    border-bottom: 1px solid rgba(57, 80, 32, .12);
+    backdrop-filter: blur(12px);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0); }
+.header-inner { 
+    min-height: 70px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 1rem; }
+.brand-link, .footer-brand { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 2.75rem; 
+    height: 2.75rem; 
+    border-radius: 50%; 
+    overflow: hidden; }
+.brand-link img, .footer-brand img { 
+    width: 100%; 
+    height: 100%; 
+    display: block; }
+.language-switcher { 
+    display: flex; 
+    align-items: center; 
+    gap: .35rem; 
+    font-size: 13px; 
+    font-weight: 400; 
+    line-height: 25px; }
+.language-button { 
+    min-width: 2.75rem; 
+    min-height: 2.75rem; 
+    border: 0; 
+    border-radius: 50%; 
+    padding: .5rem; 
+    background: transparent; 
+    color: var(--ink); 
+    cursor: pointer; font: inherit; }
+.language-button[aria-pressed="true"] { 
+    background: var(--green); 
+    color: var(--cream); }
+.hero { 
+    overflow: hidden; 
+    background: var(--green); 
+    color: var(--cream); }
+.hero-content { 
+    min-height: auto; 
+    justify-content: center; 
+    padding: 2rem 0;
+   
+    display: flex; 
+    flex-direction: column; 
+     }
+.eyebrow { 
+    margin: 0 0 .8rem; 
+    font-size: 14px; 
+    font-weight: 400; 
+    line-height: 25px; 
+    letter-spacing: .5px; 
+    text-transform: uppercase; }
+h1, h2 { 
+    margin: 0; 
+    font-family: "Any Body", Arial, sans-serif; 
+    font-weight: 700; 
+    line-height: 1.2; 
+    text-transform: uppercase; 
+    text-wrap: balance; }
+h1 { 
+    max-width: 11ch; 
+    font-size: 29px; 
+    font-weight: 400; 
+    line-height: 25px; }
+.hero-copy { 
+    max-width: 600px; 
+    margin: 1.5rem 0 0; 
+    font-size: 14px; 
+    font-weight: 400; 
+    line-height: 25px; 
+    text-transform: uppercase; 
+    color: rgba(255, 255, 255, .6); }
+.stores-section {
+    background: var(--cream);
+    padding-top: 4.5rem;
+    padding-bottom: 5rem; }
+.section-heading { 
+    margin-bottom: 2rem; }
+h2 { 
+    font-size: 32px; }
+.stores-list {
+    display: grid;
+    gap: 3.5rem; }
+.country-title {
+    margin: 0 0 1.5rem;
+    padding-bottom: .75rem;
+    border-bottom: 2px solid var(--green);
+    color: var(--green);
+    font-family: "Any Body", Arial, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: .04em;
+    text-transform: uppercase; }
+.stores-grid {
+    display: grid; gap: 2rem; }
+.store-column { 
+    display: contents; }
+.city-card { 
+    min-width: 0; }
+.city-card[data-order="0"] { order: 1; }
+.city-card[data-order="1"] { order: 2; }
+.city-card[data-order="2"] { order: 3; }
+.city-card[data-order="3"] { order: 4; }
+.city-summary { 
+    list-style: none; }
+.city-summary::-webkit-details-marker { 
+    display: none; }
+.city-title { 
+    margin: 0 0 .8rem; 
+    color: var(--green); 
+    font-family: "Any Body", Arial, sans-serif; 
+    font-size: 17px; 
+    font-weight: 700; 
+    line-height: 1.5; }
+.address-list { 
+    display: grid; 
+    gap: .5rem; }
+.store-link { 
+    min-height: 4.5rem; 
+    display: grid; 
+    grid-template-columns: 1.5rem minmax(0, 1fr) 1.5rem; 
+    gap: .8rem; 
+    align-items: center; 
+    padding: .85rem; 
+    border: 1px solid var(--line); 
+    border-radius: var(--radius); 
+    background: #fffdf8; 
+    text-decoration: none; 
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+.store-link:active { 
+    transform: scale(.985); 
+    background: var(--mist); }
+.store-link svg { 
+    width: 1.35rem; 
+    height: 1.35rem; 
+    color: var(--green); }
+.store-link .arrow { 
+    font-size: 18px; 
+    text-align: right; }
+.whatsapp-section {
+    padding: 2rem 0;
+    background: var(--mist); }
+.whatsapp-inner {
+    display: grid;
+    gap: 1.5rem; }
+.whatsapp-inner h2 {
+    font-size: 32px; }
+.whatsapp-inner p {
+    margin: .9rem 0 0;
+    max-width: 35rem; }
+.whatsapp-button {
+    z-index: 9;
+    min-height: 3.5rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: .75rem 1.1rem;
+    border: 2px solid var(--green);
+    border-radius: .8rem;
+    background: var(--green);
+    color: var(--cream);
+    box-shadow: var(--shadow);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-align: center;
+    text-decoration: none; }
+.whatsapp-button:active {
+    transform: scale(.985); }
+/* Desktop/tablet: inline button next to the heading (hidden on mobile). */
+.whatsapp-button--inline {
+    display: none; }
+/* Mobile: floats at the bottom of the screen while scrolling, then docks
+   in place once the questions section has fully scrolled into view —
+   it never rides up over the footer. Native position: sticky, no JS. */
+.whatsapp-button--floating {
+    position: sticky;
+    bottom: max(1rem, env(safe-area-inset-bottom));
+    display: flex;
+    width: calc(100% - 2rem);
+    margin: 0 auto 1rem; }
+.site-footer { 
+    padding: 2.5rem 0; 
+    background: var(--ink); 
+    color: var(--cream); }
+.footer-grid { 
+    display: grid; 
+    gap: 1.5rem; }
+.footer-brand { 
+    width: 3.25rem; 
+    height: 3.25rem; }
+.footer-details p, .footer-details address { 
+    margin: 0 0 .55rem; 
+    font-style: normal; }
+.footer-links { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: .75rem 1.25rem; }
+.footer-links a { 
+    min-height: 2.75rem; 
+    display: inline-flex; 
+    align-items: center; }
+.offline-notice { 
+    position: fixed; 
+    z-index: 30; 
+    right: 1rem; 
+    bottom: 6rem; 
+    max-width: calc(100% - 2rem); 
+    padding: .8rem 1rem; 
+    border-radius: .6rem; 
+    background: var(--ink); 
+    color: var(--cream); 
+    box-shadow: var(--shadow); }
+@media (min-width: 481px) {
+    .container {
+        width: min(100% - 3rem, var(--content)); }
+    .stores-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 2.5rem;
+        align-items: start; }
+    .store-column {
+        display: grid;
+        gap: 2rem;
+        align-content: start; }
+    .city-summary {
+        pointer-events: none; }
+    .whatsapp-section {
+        padding-bottom: 3rem; }
+    .whatsapp-inner {
+        grid-template-columns: 1fr auto;
+        align-items: center; }
+    .whatsapp-button--inline {
+        display: inline-flex; min-width: 15rem; box-shadow: none; }
+    .whatsapp-button--floating {
+        display: none; }
+    .offline-notice {
+        bottom: 1rem; } }
+@media (min-width: 1025px) { 
+    .stores-grid { 
+        grid-template-columns: repeat(4, minmax(0, 1fr)); 
+        gap: 2rem; } 
+    .store-column {
+        display: contents; }
+    .city-card:last-child { 
+        grid-column: auto; } 
+    .store-link:hover { 
+        border-color: var(--green); 
+        box-shadow: 0 .75rem 1.5rem rgba(20, 32, 12, .1); 
+        transform: translateY(-2px); } 
+    .whatsapp-button:hover { 
+        background: var(--cream); 
+        color: var(--green); } 
+    .footer-grid { 
+        grid-template-columns: auto 1fr auto; 
+        align-items: start; } }
+@media (max-width: 767px) {
+    h1 {
+        font-size: 15px;
+        line-height: 22px; }
+    .hero-copy,
+    .eyebrow {
+        font-size: 10px;
+        line-height: 22px; }
+    h2,
+    .whatsapp-inner h2 {
+        font-size: 27px; }
+}
+@media (max-width: 480px) {
+    .stores-list {
+        gap: 2.5rem; }
+    .country-title {
+        margin-bottom: 1rem;
+        font-size: 19px; }
+    .stores-grid {
+        gap: .75rem; }
+    .city-card {
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: #fffdf8; }
+    .city-summary {
+        min-height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+        padding: .75rem 1rem;
+        cursor: pointer; }
+    /* The title's bottom margin (spacing on desktop) offsets it upward
+       inside the flex row, so it sat higher than the +/− marker. */
+    .city-summary .city-title {
+        margin: 0; }
+    .city-summary::after {
+        content: "+";
+        flex: 0 0 auto;
+        color: var(--green);
+        font-size: 1.5rem;
+        line-height: 1; }
+    .city-card[open] .city-summary {
+        border-bottom: 1px solid var(--line); }
+    .city-card[open] .city-summary::after {
+        content: "−"; }
+    .city-card .address-list {
+        padding: .75rem; }
+    .city-card .store-link {
+        background: var(--cream); }
+}
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { 
+    scroll-behavior: auto !important; 
+    transition-duration: .01ms !important; } }
