@@ -44,8 +44,8 @@ const translations = {
 
 /* Shown until setLanguage() runs, and for any country missing a translation. */
 const COUNTRY_FALLBACK = {
-  de: "DEUTSCHLAND",
-  cz: "TSCHECHIEN"
+  de: "GERMANY",
+  cz: "CZECH REPUBLIC"
 };
 
 /* Legal pages live on the main anyweed.com site, one set per language. */
@@ -62,7 +62,7 @@ const LEGAL_URLS = {
   }
 };
 
-let currentLanguage = "de";
+let currentLanguage = "en";
 let noticeTimer;
 const locationIcon = '<svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>';
 
@@ -148,7 +148,7 @@ function renderStores() {
 }
 
 function setLanguage(language, shouldTrack = false) {
-  currentLanguage = language === "en" ? "en" : "de";
+  currentLanguage = language === "de" ? "de" : "en";
   const copy = translations[currentLanguage];
   document.documentElement.lang = currentLanguage;
   document.title = copy.title;
@@ -206,7 +206,7 @@ function onBreakpointChange(query, handler) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  try { currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "de"; } catch (_) { currentLanguage = "de"; }
+  try { currentLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY) || "en"; } catch (_) { currentLanguage = "en"; }
   renderStores();
   updateStoreLinkTargets();
   updateStoreExpansion();
