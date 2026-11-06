@@ -198,6 +198,16 @@ h2 {
 .store-link .arrow { 
     font-size: 18px; 
     text-align: right; }
+.franchise-cta {
+    padding: 2.5rem 0;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line); }
+.franchise-cta h2 {
+    font-size: 26px; }
+.franchise-cta p {
+    margin: .9rem 0 0;
+    max-width: 35rem; }
 .whatsapp-section {
     padding: 2rem 0;
     background: var(--mist); }

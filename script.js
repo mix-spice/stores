@@ -19,7 +19,10 @@ const translations = {
     legalPrivacy: "Datenschutz",
     legalTerms: "Angebotsbedingungen",
     country_de: "DEUTSCHLAND",
-    country_cz: "TSCHECHIEN"
+    country_cz: "TSCHECHIEN",
+    franchiseTitle: "Deine Stadt nicht dabei?",
+    franchiseSubtitle: "Eröffne deinen eigenen AnyWeed-Shop. Erprobtes Modell, eigene Produktion, fertiges Marketing.",
+    franchiseButton: "Franchise eröffnen →"
   },
   en: {
     title: "Find Us | Any Weed — Premium Hemp Boutiques in Germany",
@@ -38,7 +41,10 @@ const translations = {
     legalPrivacy: "Privacy Policy",
     legalTerms: "Offer Terms & Conditions",
     country_de: "GERMANY",
-    country_cz: "CZECH REPUBLIC"
+    country_cz: "CZECH REPUBLIC",
+    franchiseTitle: "Don\u2019t see your city here?",
+    franchiseSubtitle: "Open your own AnyWeed. Proven model, in-house production, ready-to-use marketing playbook.",
+    franchiseButton: "Open a franchise \u2192"
   }
 };
 
