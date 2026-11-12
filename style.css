@@ -198,32 +198,6 @@ h2 {
 .store-link .arrow { 
     font-size: 18px; 
     text-align: right; }
-.franchise-cta {
-    background: var(--cream);
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-    text-align: center; }
-.franchise-cta .section-heading {
-    margin-bottom: 1rem; }
-.franchise-cta p {
-    max-width: 48ch;
-    margin: 0 auto 1.75rem;
-    font-size: 15px;
-    line-height: 1.5;
-    color: var(--ink); }
-.franchise-cta-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: .9rem 1.75rem;
-    border: 1.5px solid var(--green);
-    border-radius: .5rem;
-    background: var(--green);
-    color: var(--cream);
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: .02em;
-    text-decoration: none; }
 .whatsapp-section {
     padding: 2rem 0;
     background: var(--mist); }
